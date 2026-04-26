@@ -1,0 +1,63 @@
+.tips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 327px;
+  padding-bottom: 16px;
+}
+
+.tips__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+span.tips__chip {
+  cursor: default;
+}
+
+.tips__chip {
+  margin: 0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+  font-feature-settings:
+    "cv03" 1,
+    "cv04" 1,
+    "lnum" 1,
+    "pnum" 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: rgba(0, 45, 30, 0.07);
+  color: #191f1c;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.tips__chip:hover {
+  background: rgba(0, 45, 30, 0.1);
+}
+
+.tips__chip:focus-visible {
+  outline: 2px solid #2b8659;
+  outline-offset: 2px;
+}
+
+.tips__chip--selected {
+  background: #2b8659;
+  color: #fff;
+}
+
+.tips__chip--selected:hover {
+  background: #24704b;
+}

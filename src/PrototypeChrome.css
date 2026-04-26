@@ -1,0 +1,134 @@
+.prototype-chrome {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1000;
+  width: min(320px, calc(100vw - 24px));
+  padding: 12px 14px 14px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 45, 30, 0.08);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.prototype-chrome__label {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(0, 10, 7, 0.55);
+}
+
+.prototype-chrome__segments {
+  display: flex;
+  padding: 3px;
+  border-radius: 10px;
+  background: rgba(0, 45, 30, 0.07);
+  gap: 2px;
+}
+
+.prototype-chrome__segment {
+  flex: 1;
+  margin: 0;
+  padding: 8px 6px;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: rgba(25, 31, 28, 0.75);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.prototype-chrome__segment:hover {
+  color: #191f1c;
+}
+
+.prototype-chrome__segment--active {
+  background: #fff;
+  color: #191f1c;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.prototype-chrome__segment:focus-visible {
+  outline: 2px solid #2b8659;
+  outline-offset: 2px;
+}
+
+.prototype-chrome__divider {
+  height: 1px;
+  margin: 14px 0 12px;
+  background: rgba(0, 45, 30, 0.08);
+}
+
+.prototype-chrome__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.prototype-chrome__toggle-label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #191f1c;
+}
+
+.prototype-chrome__switch {
+  position: relative;
+  width: 48px;
+  height: 28px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  border-radius: 100px;
+  background: rgba(0, 45, 30, 0.18);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.prototype-chrome__switch:hover {
+  background: rgba(0, 45, 30, 0.24);
+}
+
+.prototype-chrome__switch--on {
+  background: #2b8659;
+}
+
+.prototype-chrome__switch--on:hover {
+  background: #24704b;
+}
+
+.prototype-chrome__switch-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.prototype-chrome__switch--on .prototype-chrome__switch-knob {
+  transform: translateX(20px);
+}
+
+.prototype-chrome__switch:focus-visible {
+  outline: 2px solid #2b8659;
+  outline-offset: 2px;
+}
