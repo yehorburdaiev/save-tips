@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CheckoutScreen } from "./CheckoutScreen";
 import { PrototypeChrome, type VariantId } from "./PrototypeChrome";
+import { PrototypeGate } from "./PrototypeGate";
 
 export default function App() {
   const [variant, setVariant] = useState<VariantId>("a");
@@ -12,7 +13,7 @@ export default function App() {
   };
 
   return (
-    <>
+    <PrototypeGate>
       <PrototypeChrome
         variant={variant}
         onVariantChange={handleVariantChange}
@@ -20,6 +21,6 @@ export default function App() {
         onNextSessionChange={setNextSession}
       />
       <CheckoutScreen variant={variant} nextSession={nextSession} />
-    </>
+    </PrototypeGate>
   );
 }
