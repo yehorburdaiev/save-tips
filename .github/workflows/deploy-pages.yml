@@ -1,5 +1,7 @@
 # Build and deploy the Vite app to GitHub Pages.
-# After the first run: Repo → Settings → Pages → set "Source" to "GitHub Actions".
+#
+# REQUIRED (once per repo) or deploy fails with 404 "Failed to create deployment":
+#   GitHub → repo → Settings → Pages → Build and deployment → Source → "GitHub Actions"
 
 name: Deploy to GitHub Pages
 
@@ -22,6 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -40,4 +43,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
