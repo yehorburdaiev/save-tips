@@ -3,9 +3,9 @@ import "./PrototypeChrome.css";
 export type VariantId = "a" | "b" | "c";
 
 const VARIANTS: { id: VariantId; label: string }[] = [
-  { id: "a", label: "Variant A (control)" },
-  { id: "b", label: "Variant B" },
-  { id: "c", label: "Variant C" },
+  { id: "a", label: "Control" },
+  { id: "b", label: "Treatment A" },
+  { id: "c", label: "Treatment B" },
 ];
 
 export type PrototypeChromeProps = {
