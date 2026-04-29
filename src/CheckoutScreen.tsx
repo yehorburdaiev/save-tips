@@ -638,11 +638,7 @@ export function CheckoutScreen({ variant, nextSession }: CheckoutScreenProps) {
             >
               <div className="checkout__save-row-collapsible-inner">
                 <div className="checkout__save-row">
-                  <span>
-                    {variant === "c"
-                      ? "Save tip for next time"
-                      : "Save tip as default"}
-                  </span>
+                  <span>Save tip for next time</span>
                   <button
                     type="button"
                     className={`checkout__switch${saveTipDefaultOn ? " checkout__switch--on" : ""}`}
